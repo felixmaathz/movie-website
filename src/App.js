@@ -30,7 +30,7 @@ function App() {
           <MovieList 
             data={searchResults}
           />} />
-          <Route path="/movieDB/movie/:movieId" element={<MovieInformation />} />
+          <Route path="/movie-website/movie/:movieId" element={<MovieInformation />} />
         </Routes>
       </Router>
     </>
