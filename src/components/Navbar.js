@@ -50,7 +50,7 @@ const Navbar = ({ sendSearchResults }) => {
       }
       const data = await response.json();
       sendSearchResults(data.results);
-      navigate(`movie-website/search/${encodeURIComponent(search)}`);
+      navigate(`movieDB/search/${encodeURIComponent(search)}`);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -78,15 +78,15 @@ const Navbar = ({ sendSearchResults }) => {
   };
 
   return (
-    <div className="bg-primary h-24 flex justify-center items-center fixed top-0 left-0 w-full z-[100]">
+    <div className="bg-primary h-16 md:h-24 flex justify-center items-center fixed top-0 left-0 w-full z-[100]">
       <Link
         className="hidden md:block absolute left-12 cursor-pointer"
-        to={"/movie-website"}
+        to={"/movieDB"}
         onClick={goHome}
       >
         <BiCameraMovie size={40} className="text-accent" />
       </Link>
-      <div className="relative h-12 w-1/2 md:w-80 inline-flex items-center">
+      <div className="relative h-10 md:h-12 w-2/3 md:w-80 inline-flex items-center">
         <input
           className="w-full h-full border-2 outline-none rounded-xl 
                   bg-transparent border-accent text-white   

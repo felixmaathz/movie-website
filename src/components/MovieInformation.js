@@ -33,7 +33,7 @@ const MovieInformation = () => {
   }, [movieId]);
 
   return (
-    <div className="bg-secondary h-full pt-24 flex justify-center text-white">
+    <div className="bg-secondary h-full pt-16 md:pt-24 flex justify-center text-white">
       {isLoading ? (
         <div className="flex items-center">
           <Loader />
@@ -55,7 +55,7 @@ const MovieInformation = () => {
               />
             </div>
             <div className="m-auto bg-primary border-t-2 md:border-0 md:bg-transparent col-span-1 lg:col-span-2 p-4 px-6">
-              <h1 className="text-5xl font-bold">{movieInformation.title}</h1>
+              <h1 className=" text-5xl font-bold">{movieInformation.title}</h1>
 
               <div className="flex justify-between mt-4">
                 <p className="text-2xl opacity-60">
@@ -63,7 +63,7 @@ const MovieInformation = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <p className="text-2xl mr-2">
-                    {Math.round(movieInformation.vote_average * 10) / 10} / 10 
+                    {Math.round(movieInformation.vote_average * 10) / 10} / 10
                   </p>
                   <FaStar className=" text-accent" />
                 </div>
