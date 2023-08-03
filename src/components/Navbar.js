@@ -50,7 +50,7 @@ const Navbar = ({ sendSearchResults }) => {
       }
       const data = await response.json();
       sendSearchResults(data.results);
-      navigate(`/search/${encodeURIComponent(search)}`);
+      navigate(`movie-website/search/${encodeURIComponent(search)}`);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
