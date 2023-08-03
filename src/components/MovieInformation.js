@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "./Loader";
+import { FaStar } from "react-icons/fa";
 
 const MovieInformation = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -60,9 +61,12 @@ const MovieInformation = () => {
                 <p className="text-2xl opacity-60">
                   {movieInformation.tagline}
                 </p>
-                <p className="text-3xl">
-                  {Math.round(movieInformation.vote_average * 10) / 10} / 10
-                </p>
+                <div className="flex justify-between items-center">
+                  <p className="text-2xl mr-2">
+                    {Math.round(movieInformation.vote_average * 10) / 10} / 10 
+                  </p>
+                  <FaStar className=" text-accent" />
+                </div>
               </div>
               <p className="mt-4">{movieInformation.overview}</p>
               <p className="text-xl mt-4">

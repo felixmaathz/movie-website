@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import Loader from "./Loader";
 import { useParams } from "react-router-dom";
@@ -10,8 +10,6 @@ const MovieList = ({ data }) => {
 
   const { searchId } = useParams();
 
-
-  
   const sortMovies = (sortBy) => {
     if (sortBy === "popularity") {
       const sortedMovies = [...searchResults].sort(
@@ -44,7 +42,7 @@ const MovieList = ({ data }) => {
       console.log("sorted by votes", sortedMovies);
     }
     setSortOption(sortBy);
-  };  
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -57,7 +55,7 @@ const MovieList = ({ data }) => {
   }, [data]);
 
   return (
-    <div className={`flex flex-col bg-secondary min-h-screen mt-24`}>
+    <div className={`flex flex-col bg-secondary min-h-screen pt-24`}>
       {searchResults.length > 0 ? (
         <label className="mx-auto my-4  sm:mx-10 flex justify-between">
           <div>
@@ -78,23 +76,26 @@ const MovieList = ({ data }) => {
       ) : (
         ""
       )}
-      <div className="text-black flex flex-row flex-wrap justify-around content-around">
-        {isLoading ? (
+
+      {isLoading ? (
+        <div className="flex items-center justify-center flex-grow">
           <Loader />
-        ) : (
-          
-          searchResults.map((movie) => (
+        </div>
+      ) : (
+        <div className="text-black flex flex-row flex-wrap justify-around content-around">
+          {searchResults.map((movie) => (
             <MovieCard key={movie.id} data={movie} />
-          ))
-        )}
-        {searchResults.length === 0 && !isLoading ? (
-          <div className="mt-20">
-            <h1 className="text-4xl text-center">No results found :/</h1>
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
+          ))}
+
+          {searchResults.length === 0 && !isLoading ? (
+            <div className="mt-20">
+              <h1 className="text-4xl text-center">No results found :/</h1>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+      )}
     </div>
   );
 };
