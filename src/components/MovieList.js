@@ -57,7 +57,7 @@ const MovieList = ({ data }) => {
   return (
     <div className={`flex flex-col bg-secondary min-h-screen pt-16 md:pt-24`}>
       {searchResults.length > 0 ? (
-        <label className="mx-auto my-4  sm:mx-10 flex justify-between">
+        <label className="mx-auto my-4 md:mx-10 flex justify-between">
           <div>
             Sort by:
             <select

@@ -54,18 +54,20 @@ const MovieInformation = () => {
                 className="h-[28rem] w-auto object-cover"
               />
             </div>
-            <div className="m-auto bg-primary border-t-2 md:border-0 md:bg-transparent col-span-1 lg:col-span-2 p-4 px-6">
-              <h1 className=" text-5xl font-bold">{movieInformation.title}</h1>
+            <div className="m-auto bg-primary border-y-2 border-accent md:border-0 md:bg-transparent col-span-1 lg:col-span-2 p-4 px-6">
+              <h1 className="text-center md:text-left text-5xl font-bold">
+                {movieInformation.title}
+              </h1>
 
               <div className="flex justify-between mt-4">
                 <p className="text-2xl opacity-60">
                   {movieInformation.tagline}
                 </p>
-                <div className="flex justify-between items-center">
+                <div className="flex flex-row items-center justify-center">
                   <p className="text-2xl mr-2">
                     {Math.round(movieInformation.vote_average * 10) / 10} / 10
                   </p>
-                  <FaStar className=" text-accent" />
+                  <FaStar className="text-accent" />
                 </div>
               </div>
               <p className="mt-4">{movieInformation.overview}</p>
