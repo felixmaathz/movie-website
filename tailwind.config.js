@@ -10,6 +10,10 @@ export const theme = {
       secondary: '#fbeceb'
 
     },
+    fontFamily: {
+      'quicksand': ['quicksand', 'sans-serif'],
+
+    },
   },
   }
 export const plugins = [];
