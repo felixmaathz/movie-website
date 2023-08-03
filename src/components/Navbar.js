@@ -81,7 +81,7 @@ const Navbar = ({ sendSearchResults }) => {
     <div className="bg-primary h-24 flex justify-center items-center fixed top-0 left-0 w-full z-[100]">
       <Link
         className="hidden md:block absolute left-12 cursor-pointer"
-        to={"/"}
+        to={"/movie-website"}
         onClick={goHome}
       >
         <BiCameraMovie size={40} className="text-accent" />
