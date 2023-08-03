@@ -1,5 +1,6 @@
 {
   "name": "movie-website",
+  "homepage": "https://felixmaathz.github.io/movie-website/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
