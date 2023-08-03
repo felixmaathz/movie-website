@@ -23,10 +23,10 @@ function App() {
           sendSearchResults={handleSearchResults} />
 
         <Routes>
-          <Route path="/movieDB" element={<MovieList 
+          <Route path="/movie-website" element={<MovieList 
             data={searchResults}
           />} />
-          <Route path="/movieDB/search/:searchId" element={
+          <Route path="/movie-website/search/:searchId" element={
           <MovieList 
             data={searchResults}
           />} />
