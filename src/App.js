@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import MovieList from "./components/MovieList";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as BrowserRouter, Routes, Route } from "react-router-dom";
 import MovieInformation from "./components/MovieInformation";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <Navbar 
           sendSearchResults={handleSearchResults} />
 
@@ -32,7 +32,7 @@ function App() {
           />} />
           <Route path="/movie-website/movie/:movieId" element={<MovieInformation />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
