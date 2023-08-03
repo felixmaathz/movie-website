@@ -9,7 +9,7 @@ const MovieCard = ({ data }) => {
 
   return (
     <Link
-      to={`/movie/${data.id}`}
+      to={`/movie-website/movie/${data.id}`}
       style={{ textDecoration: "none", color: "inherit" }}
     >
       <div
