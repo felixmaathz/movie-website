@@ -90,6 +90,13 @@ const MovieList = ({ data }) => {
           {searchResults.length === 0 && !isLoading ? (
             <div className="mt-20">
               <h1 className="text-4xl text-center">No results found :/</h1>
+              <h1 className="text-2xl text-center mt-4 cursor-pointer text-accent hover:text-black transition duration-100"
+                onClick={() => {
+                  window.location.href = "/movieDB";
+                }}
+              >
+                Go back
+              </h1>
             </div>
           ) : (
             ""
