@@ -39,14 +39,14 @@ const MovieInformation = () => {
           <Loader />
         </div>
       ) : (
-        <div className="relative w-full h-full">
+        <div className="relative w-full md:h-full h-auto">
           <img
             src={`https://image.tmdb.org/t/p/w1280/${movieInformation.backdrop_path}`}
             alt="poster"
             className="w-full h-full object-cover"
           />
           <div className="absolute top-0 left-0 w-full h-full z-1 bg-black opacity-70"></div>
-          <div className="absolute top-0 left-0 w-full h-full z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-24 py-8">
+          <div className="absolute top-0 left-0 w-full h-full z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-24 py-2 md:py-8">
             <div className="col-span-1 m-auto">
               <img
                 src={`https://image.tmdb.org/t/p/w500/${movieInformation.poster_path}`}
@@ -63,11 +63,11 @@ const MovieInformation = () => {
                 <p className="text-2xl opacity-60">
                   {movieInformation.tagline}
                 </p>
-                <div className="flex flex-row items-center justify-center">
-                  <p className="text-2xl mr-2">
-                    {Math.round(movieInformation.vote_average * 10) / 10} / 10
+                <div className="flex flex-row items-baseline justify-center">
+                  <p className="text-lg md:text-2xl">
+                    {Math.round(movieInformation.vote_average * 10) / 10}
                   </p>
-                  <FaStar className="text-accent" />
+                  <p className="text-sm">/10</p>
                 </div>
               </div>
               <p className="mt-4">{movieInformation.overview}</p>
